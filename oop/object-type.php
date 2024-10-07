@@ -1,5 +1,5 @@
 <?php
-
+require 'CetakInfoProduk.php';
 class produk {
     public $judul,
          $penulis,
@@ -14,14 +14,14 @@ class produk {
     }
 
     public function getLabel(){
-        return "$this->penulis, $this->penerbit";
+        return "$this->judul, $this->penulis, $this->penerbit, $this->harga";
     }
 }
 
 
 $produk1 = new produk("Naruto", "Masashi Kishimoto", "Shounen Jump", 30000);
 $produk2 = new produk("Uncharteed", "Neil Druckmann", "Shounen Jump", 250000);
-$produk3 = new produk("Dragon Ball");
+
 
 
 
@@ -34,4 +34,6 @@ echo "<br>";
 
 echo "Game : " . $produk2->getLabel();
 echo "<br>";
-var_dump($produk3);
+$infoProduk1 = new CetakInfoProduk();
+echo $infoProduk1->cetak($produk1);
+
