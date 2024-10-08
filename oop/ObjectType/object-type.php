@@ -1,4 +1,5 @@
 <?php
+namespace ObjectType;
 require 'CetakInfoProduk.php';
 class produk {
     public $judul,

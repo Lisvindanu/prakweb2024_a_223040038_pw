@@ -1,5 +1,5 @@
 <?php
-
+namespace propertyMethod;
 class produk {
     public $judul = "judul",
          $penulis = "penulis",
