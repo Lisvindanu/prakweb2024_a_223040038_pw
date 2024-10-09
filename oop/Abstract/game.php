@@ -1,6 +1,6 @@
 <?php
-namespace visibility;
-class game extends \visibility\produk {
+namespace abstract;
+class game extends produk  {
 
     public $waktuMain;
 
@@ -18,7 +18,7 @@ class game extends \visibility\produk {
     }
 
     public function getInfoProduct() {
-        $str = "Game : " . parent::getInfoProduct() . " - {$this->waktuMain} jam";
+        $str = "Game : " . $this->getInfo() . " - {$this->waktuMain} jam";
         return $str;
     }
 }

@@ -31,8 +31,8 @@ class produk {
 }
 
 
-$produk1 = new \komik("Naruto", "Masashi Kishimoto", "Shounen Jump", 30000, 100, null, );
-$produk2 = new \game("Uncharteed", "Neil Druckmann", "Shounen Jump", 250000, null, 50, );
+$produk1 = new komik("Naruto", "Masashi Kishimoto", "Shounen Jump", 30000, 100, null, );
+$produk2 = new game("Uncharteed", "Neil Druckmann", "Shounen Jump", 250000, null, 50, );
 
 //Komik : Naruto, Masashi Kishimoto, Shounen Jump, 30000
 //Game : Uncharteed, Neil Druckmann, Shounen Jump, 250000

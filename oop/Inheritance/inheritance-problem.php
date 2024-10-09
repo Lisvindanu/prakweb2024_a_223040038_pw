@@ -1,4 +1,5 @@
 <?php
+namespace Inheritance1;
 require 'CetakInfoProduk.php';
 class produk {
     public $judul,

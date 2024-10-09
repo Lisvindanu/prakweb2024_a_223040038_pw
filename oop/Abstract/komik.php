@@ -1,7 +1,8 @@
 <?php
-namespace visibility;
+namespace abstract;
 
-class komik extends \visibility\produk {
+
+class komik extends produk {
     public $jmlHalaman;
 
     public function __construct($judul , $penulis, $penerbit , $harga ,  $jmlHalaman) {
@@ -9,7 +10,7 @@ class komik extends \visibility\produk {
         $this->jmlHalaman = $jmlHalaman;
     }
     public function getInfoProduct() {
-        $str = " komik : " . parent::getInfoProduct() . " - {$this->jmlHalaman} Halaman";
+        $str = " komik : " . $this->getInfo() . " - {$this->jmlHalaman} Halaman";
         return $str;
     }
 

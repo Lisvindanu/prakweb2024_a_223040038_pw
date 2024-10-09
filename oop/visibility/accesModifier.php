@@ -1,11 +1,11 @@
 <?php
 namespace visibility;
 
-use gameOveriding\game;
-use Komikmikoveriding\komik;
 
-require 'komik.php';
+
 require 'game.php';
+require 'komik.php';
+
 class produk {
     public $judul,
          $penulis,
