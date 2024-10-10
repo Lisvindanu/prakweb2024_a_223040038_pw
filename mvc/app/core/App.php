@@ -1,7 +1,5 @@
 <?php
 
-namespace core;
-
 class App {
 
     protected $controller = 'Home';
@@ -12,13 +10,13 @@ class App {
 
         //controller
         if($url && isset($url[0])){
-            if(file_exists('../app/controllers/'.$url[0].'.php')){
+            if(file_exists('../app/controller/'.$url[0].'.php')){
                 $this->controller = $url[0];
                 unset($url[0]);
             }
 
         }
-        require_once '../app/controllers/'.$this->controller.'.php';
+        require_once '../app/controller/'.$this->controller.'.php';
         $this->controller = new $this->controller;
 
 
@@ -30,10 +28,12 @@ class App {
             }
         }
 
-        //params
-        if(!empty($this->params)) {
+
+        // params
+        if (!empty($url)) {
             $this->params = array_values($url);
         }
+
 
         //jika controller & method, serta kirimpakn params jika ada
         call_user_func_array(
@@ -48,6 +48,7 @@ class App {
             $url = explode('/', $url);
             return $url;
         }
+        return [];
     }
 
 }
